@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Imageslider</title>
+    <style>
+       body{width: 100%; text-align: center; margin-top: 250px; background-color: rgb(176, 196, 190);}
+    </style>
+</head>
+<body>
+    
+    <img id="imgslide"/>
+
+    <script>
+        var slideimg=['slider1.JPG','slider2.JPG','slider3.JPG'];
+        var index=0;
+        var duration=1000;
+
+        function imgslide(){
+            document.getElementById("imgslide").src=slideimg[index];
+            index++;
+            if(index==slideimg.length){index=0;}
+            setTimeout("imgslide()",duration);
+        }
+        imgslide();
+
+    </script>
+    <h1>Image slider</h1>
+</body>
+</html>
